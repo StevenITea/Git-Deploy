@@ -229,6 +229,91 @@ git push -u origin main</code></pre>
 
     <hr>
 
+    <h2>🧪 Captures complémentaires du tutoriel</h2>
+
+    <p>
+      Voici la suite logique du tutoriel avec les nouvelles captures ajoutées à la fin du document, dans l’ordre d’utilisation.
+      Elles montrent la création des fichiers, l’envoi vers GitHub, le cas du <code>README</code> déjà présent en ligne,
+      puis l’activation de GitHub Pages.
+    </p>
+
+    <h3>1. Vérifier la création des fichiers du projet</h3>
+    <p>
+      Une fois vos fichiers créés, vous devez voir dans Visual Studio Code votre dossier <code>ProjetGit</code> avec
+      <code>index.html</code>, <code>style.css</code> et le dossier <code>images</code>.
+    </p>
+    <img src="images/6.png" alt="Fichiers du projet visibles dans Visual Studio Code" class="img">
+
+    <h3>2. Ajouter les fichiers et faire le premier commit</h3>
+    <p>
+      Dans le terminal, vous pouvez ensuite lancer les commandes suivantes pour initialiser Git, ajouter les fichiers,
+      créer le commit, puis renommer la branche en <code>main</code>.
+    </p>
+    <pre><code>git init
+git add .
+git commit -m "Ajout du site"
+git branch -M main</code></pre>
+    <img src="images/5.png" alt="Commandes Git dans le terminal après la création du projet" class="img">
+
+    <h3>3. Cas particulier : un README existe déjà sur GitHub</h3>
+    <p>
+      Si vous avez créé un <code>README</code> directement sur GitHub, il se peut que votre dépôt distant contienne déjà
+      un fichier que vous n’avez pas encore en local. Dans ce cas, un <code>git pull</code> peut ouvrir un message de fusion.
+    </p>
+    <img src="images/7.png" alt="Message de fusion Git dans Visual Studio Code" class="img">
+
+    <p>
+      Il faudra alors valider le message de merge pour terminer l’opération, puis continuer normalement.
+    </p>
+
+    <h3>4. Envoyer le projet sur GitHub</h3>
+    <p>
+      Une fois le dépôt correctement relié, vous pouvez envoyer le projet avec :
+    </p>
+    <pre><code>git push -u origin main</code></pre>
+    <img src="images/8.png" alt="Commande git push réussie dans le terminal" class="img">
+
+    <h3>5. Vérifier que les fichiers sont bien présents sur le dépôt</h3>
+    <p>
+      Après l’envoi, vous devez retrouver vos fichiers sur GitHub : le dossier <code>images</code>,
+      <code>index.html</code>, <code>style.css</code> et éventuellement le <code>README</code>.
+    </p>
+    <img src="images/9.png" alt="Fichiers présents sur le dépôt GitHub" class="img">
+
+    <h3>6. Ouvrir les paramètres du repository</h3>
+    <p>
+      Pour publier le site, rendez-vous ensuite dans l’onglet <strong>Settings</strong> de votre repository.
+    </p>
+    <img src="images/10.png" alt="Onglet Settings du repository GitHub" class="img">
+
+    <h3>7. Activer GitHub Pages</h3>
+    <p>
+      Dans la section <strong>Pages</strong>, choisissez <strong>Deploy from a branch</strong>. Si GitHub Pages est encore désactivé,
+      vous verrez d’abord que la branche est définie sur <code>None</code>.
+    </p>
+    <img src="images/11.png" alt="Page GitHub Pages avant activation" class="img">
+
+    <p>
+      Sélectionnez ensuite la branche <code>main</code> et le dossier <code>/root</code>, puis cliquez sur <strong>Save</strong>.
+    </p>
+    <img src="images/12.png" alt="Configuration de la branche main et du dossier root pour GitHub Pages" class="img">
+
+    <h3>8. Vérifier le déploiement</h3>
+    <p>
+      Une fois GitHub Pages activé, GitHub affiche que le site est en cours de génération ou déjà déployé.
+      Vous pouvez aussi voir le déploiement dans la page principale du repository.
+    </p>
+    <img src="images/13.png" alt="Déploiement GitHub Pages visible sur le repository" class="img">
+
+    <h3>9. Résultat final attendu</h3>
+    <p>
+      Lorsque tout est terminé, votre site est accessible via l’URL fournie par GitHub Pages.
+      Voici un exemple du rendu final obtenu.
+    </p>
+    <img src="images/14.png" alt="Résultat final du site GitHub Pages" class="img">
+
+    <hr>
+
     <h2>✅ Résultat</h2>
 
     <p>
