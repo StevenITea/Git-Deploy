@@ -9,6 +9,15 @@
 <body>
   <div class="container">
 
+    <div class="top-bar">
+      <div class="lang-switch" aria-label="Sélecteur de langue">
+        <span class="lang-label">Langue :</span>
+        <a href="index.html" class="active">FR</a>
+        <span class="separator">|</span>
+        <a href="index-en.html">EN</a>
+      </div>
+    </div>
+
     <h1>📘 Tutoriel : créer et déployer un site simple sur GitHub Pages</h1>
 
     <p>
@@ -74,6 +83,7 @@
 
     <pre><code>ProjetGit/
 ├── index.html
+├── index-en.html
 ├── style.css
 └── images/</code></pre>
 
@@ -143,6 +153,7 @@ git config user.email "votre adresse mail github"</code></pre>
 
     <ul>
       <li><code>index.html</code> pour la structure de la page ;</li>
+      <li><code>index-en.html</code> pour la version anglaise ;</li>
       <li><code>style.css</code> pour la mise en forme ;</li>
       <li>un dossier <code>images</code> pour les illustrations.</li>
     </ul>
@@ -168,6 +179,7 @@ git config user.email "votre adresse mail github"</code></pre>
 
     <ul>
       <li><code>index.html</code></li>
+      <li><code>index-en.html</code></li>
       <li><code>style.css</code></li>
       <li>les images</li>
       <li>et les autres fichiers éventuels</li>
@@ -213,7 +225,7 @@ git push -u origin main</code></pre>
       <li><strong>Pages</strong></li>
       <li><strong>Source</strong> → <code>Deploy from a branch</code></li>
       <li><strong>Branch</strong> → <code>main</code></li>
-      <li><strong>Folder</strong> → <code>/root</code></li>
+      <li><strong>Folder</strong> → <code>/ (root)</code></li>
       <li>puis cliquez sur <strong>Save</strong></li>
     </ul>
 
@@ -294,7 +306,7 @@ git branch -M main</code></pre>
     <img src="images/11.png" alt="Page GitHub Pages avant activation" class="img">
 
     <p>
-      Sélectionnez ensuite la branche <code>main</code> et le dossier <code>/root</code>, puis cliquez sur <strong>Save</strong>.
+      Sélectionnez ensuite la branche <code>main</code> et le dossier <code>/ (root)</code>, puis cliquez sur <strong>Save</strong>.
     </p>
     <img src="images/12.png" alt="Configuration de la branche main et du dossier root pour GitHub Pages" class="img">
 

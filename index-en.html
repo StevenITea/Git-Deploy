@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Pages Tutorial</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <div class="top-bar">
+      <div class="lang-switch" aria-label="Language switcher">
+        <span class="lang-label">Language:</span>
+        <a href="index.html">FR</a>
+        <span class="separator">|</span>
+        <a href="index-en.html" class="active">EN</a>
+      </div>
+    </div>
+
+    <h1>📘 Tutorial: create and deploy a simple website with GitHub Pages</h1>
+
+    <p>
+      This tutorial was created by <strong>StevenITea</strong>.<br>
+      For any questions or help requests: <strong>Discord: stevenltea</strong>
+    </p>
+
+    <p>
+      <strong>Tutorial objective:</strong> learn how to publish a simple website from an
+      <code>index.html</code> file and a <code>style.css</code> file, without going into advanced development concepts.
+      The goal is to focus on the basics: create the project, link it to GitHub, send the files, then enable GitHub Pages.
+    </p>
+
+    <p>
+      Depending on the type of project, other solutions exist, such as <strong>MkDocs</strong> for technical documentation,
+      <strong>Jekyll</strong> for GitHub Pages-compatible static sites, <strong>Hugo</strong> for fast websites,
+      or <strong>WordPress</strong> for dynamic websites. Here, we deliberately choose a simple HTML/CSS approach
+      to clearly understand the deployment process.
+    </p>
+
+    <hr>
+
+    <h2>🧩 Step 1: prepare the required tools</h2>
+
+    <p>
+      Before getting started, you need two things:
+    </p>
+
+    <ul>
+      <li>a <strong>GitHub account</strong>;</li>
+      <li><strong>Visual Studio Code</strong> installed on your computer.</li>
+    </ul>
+
+    <p>
+      On Windows, it is recommended to launch Visual Studio Code as an <strong>administrator</strong> during the initial setup,
+      to avoid certain permission-related issues.
+    </p>
+
+    <hr>
+
+    <h2>📁 Step 2: create the GitHub repository</h2>
+
+    <p>
+      Sign in to GitHub and create a new repository. It is recommended to choose a <strong>short name</strong>,
+      preferably in English, along with a <strong>clear description</strong>. You can also check the option
+      to add a <code>README</code>, but it is not required for this tutorial.
+    </p>
+
+    <img src="images/CreateRepository.png" alt="Creating a GitHub repository" class="img">
+
+    <hr>
+
+    <h2>🗂️ Step 3: create the project folder on your computer</h2>
+
+    <p>
+      Create a folder wherever you want, for example <code>ProjetGit</code>. Then right-click that folder
+      and choose <strong>Open with Code</strong> to open it directly in Visual Studio Code.
+    </p>
+
+    <p>
+      In this project, the basic structure will look like this:
+    </p>
+
+    <pre><code>ProjetGit/
+├── index.html
+├── index-en.html
+├── style.css
+└── images/</code></pre>
+
+    <p>
+      The <code>images</code> folder will contain the screenshots or illustrations used on the site.
+      GitHub Pages needs an <code>index.html</code> file to display the website properly.
+    </p>
+
+    <img src="images/ouvrircode.png" alt="Opening the folder with Visual Studio Code" class="img">
+
+    <hr>
+
+    <h2>⚙️ Step 4: initialize Git and configure your identity</h2>
+
+    <p>
+      Once the folder is open in Visual Studio Code, open a terminal using <strong>Terminal → New Terminal</strong>.
+      Then initialize Git in the project folder and configure your GitHub identity.
+    </p>
+
+    <pre><code>git init
+git config user.name "your github username"
+git config user.email "your github email address"</code></pre>
+
+    <p>
+      If you want to apply this configuration to all your future projects, you can use the
+      <code>--global</code> option.
+    </p>
+
+    <img src="images/Code.png" alt="Project opened in Visual Studio Code" class="img">
+
+    <hr>
+
+    <h2>🔗 Step 5: get the GitHub repository link</h2>
+
+    <p>
+      Go back to GitHub, open your repository, then click the <strong>Code</strong> button to copy the repository URL.
+      If the repository is empty, this link appears directly on the page.
+    </p>
+
+    <img src="images/Repositlink.png" alt="GitHub repository link" class="img">
+
+    <p>
+      This URL will allow you to connect your local folder to your remote GitHub repository.
+    </p>
+
+    <pre><code>git remote add origin https://github.com/USER/REPOSITORY-NAME.git</code></pre>
+
+    <p>
+      This command links the local project to the remote GitHub repository. If an old repository is already linked,
+      you can remove it with:
+    </p>
+
+    <pre><code>git remote remove origin</code></pre>
+
+    <p>
+      Then run the previous command again with the correct URL. To check the currently linked repository, use:
+    </p>
+
+    <pre><code>git remote -v</code></pre>
+
+    <hr>
+
+    <h2>🖋️ Step 6: create the website files</h2>
+
+    <p>
+      The next step is to create the website content. For this example, we will only use:
+    </p>
+
+    <ul>
+      <li><code>index.html</code> for the page structure;</li>
+      <li><code>index-en.html</code> for the English version;</li>
+      <li><code>style.css</code> for the design;</li>
+      <li>an <code>images</code> folder for illustrations.</li>
+    </ul>
+
+    <p>
+      For this example, the website content was prepared from an existing tutorial, then reworked with the help of AI,
+      in order to produce a simple, clear, and easy-to-understand structure for a first deployment.
+    </p>
+
+    <hr>
+
+    <h2>📤 Step 7: add the files and create the first commit</h2>
+
+    <p>
+      Once your files are created, you need to add them to Git to prepare them for upload to GitHub.
+    </p>
+
+    <pre><code>git add .</code></pre>
+
+    <p>
+      This command adds all project files, for example:
+    </p>
+
+    <ul>
+      <li><code>index.html</code></li>
+      <li><code>index-en.html</code></li>
+      <li><code>style.css</code></li>
+      <li>the images</li>
+      <li>and any other files if needed</li>
+    </ul>
+
+    <p>
+      Next, create a first commit to save this version of the project:
+    </p>
+
+    <pre><code>git commit -m "Add website"</code></pre>
+
+    <p>
+      The commit message simply describes the changes you made. You can choose another message if needed.
+    </p>
+
+    <hr>
+
+    <h2>🌿 Step 8: send the project to the main branch</h2>
+
+    <p>
+      GitHub usually uses the <code>main</code> branch as the default branch. So make sure the project is on it,
+      then send the content to GitHub.
+    </p>
+
+    <pre><code>git branch -M main
+git push -u origin main</code></pre>
+
+    <p>
+      At this point, your code is now on GitHub.
+    </p>
+
+    <hr>
+
+    <h2>🌍 Step 9: enable GitHub Pages</h2>
+
+    <p>
+      Once the files have been sent, the only thing left is to publish the site.
+      On GitHub, go to:
+    </p>
+
+    <ul>
+      <li><strong>Settings</strong></li>
+      <li><strong>Pages</strong></li>
+      <li><strong>Source</strong> → <code>Deploy from a branch</code></li>
+      <li><strong>Branch</strong> → <code>main</code></li>
+      <li><strong>Folder</strong> → <code>/ (root)</code></li>
+      <li>then click <strong>Save</strong></li>
+    </ul>
+
+    <p>
+      GitHub will then generate a publication URL in this format:
+    </p>
+
+    <pre><code>https://yourusername.github.io/repository-name/</code></pre>
+
+    <p>
+      This is the address you will be able to share to access your website online.
+    </p>
+
+    <hr>
+
+    <h2>🧪 Additional tutorial screenshots</h2>
+
+    <p>
+      Here is the logical continuation of the tutorial with the new screenshots added at the end of the document, in order of use.
+      They show the file creation, the upload to GitHub, the case where a <code>README</code> already exists online,
+      then the GitHub Pages activation.
+    </p>
+
+    <h3>1. Check that the project files were created correctly</h3>
+    <p>
+      Once your files are created, you should see your <code>ProjetGit</code> folder in Visual Studio Code with
+      <code>index.html</code>, <code>style.css</code>, and the <code>images</code> folder.
+    </p>
+    <img src="images/6.png" alt="Project files visible in Visual Studio Code" class="img">
+
+    <h3>2. Add the files and create the first commit</h3>
+    <p>
+      In the terminal, you can then run the following commands to initialize Git, add the files,
+      create the commit, and rename the branch to <code>main</code>.
+    </p>
+    <pre><code>git init
+git add .
+git commit -m "Add website"
+git branch -M main</code></pre>
+    <img src="images/5.png" alt="Git commands in the terminal after creating the project" class="img">
+
+    <h3>3. Special case: a README already exists on GitHub</h3>
+    <p>
+      If you created a <code>README</code> directly on GitHub, your remote repository may already contain
+      a file that you do not yet have locally. In that case, a <code>git pull</code> may open a merge message.
+    </p>
+    <img src="images/7.png" alt="Git merge message in Visual Studio Code" class="img">
+
+    <p>
+      You will then need to validate the merge message to complete the operation, and then continue normally.
+    </p>
+
+    <h3>4. Send the project to GitHub</h3>
+    <p>
+      Once the repository is correctly linked, you can send the project with:
+    </p>
+    <pre><code>git push -u origin main</code></pre>
+    <img src="images/8.png" alt="Successful git push command in the terminal" class="img">
+
+    <h3>5. Check that the files are present in the repository</h3>
+    <p>
+      After uploading, you should find your files on GitHub: the <code>images</code> folder,
+      <code>index.html</code>, <code>style.css</code>, and possibly the <code>README</code>.
+    </p>
+    <img src="images/9.png" alt="Files present in the GitHub repository" class="img">
+
+    <h3>6. Open the repository settings</h3>
+    <p>
+      To publish the site, go to the <strong>Settings</strong> tab of your repository.
+    </p>
+    <img src="images/10.png" alt="Settings tab of the GitHub repository" class="img">
+
+    <h3>7. Enable GitHub Pages</h3>
+    <p>
+      In the <strong>Pages</strong> section, choose <strong>Deploy from a branch</strong>. If GitHub Pages is still disabled,
+      you will first see that the branch is set to <code>None</code>.
+    </p>
+    <img src="images/11.png" alt="GitHub Pages page before activation" class="img">
+
+    <p>
+      Then select the <code>main</code> branch and the <code>/ (root)</code> folder, then click <strong>Save</strong>.
+    </p>
+    <img src="images/12.png" alt="Configuration of the main branch and root folder for GitHub Pages" class="img">
+
+    <h3>8. Check the deployment</h3>
+    <p>
+      Once GitHub Pages is enabled, GitHub shows that the site is being built or is already deployed.
+      You can also see the deployment from the repository main page.
+    </p>
+    <img src="images/13.png" alt="GitHub Pages deployment visible on the repository" class="img">
+
+    <h3>9. Expected final result</h3>
+    <p>
+      Once everything is complete, your site is accessible through the URL provided by GitHub Pages.
+      Here is an example of the final result.
+    </p>
+    <img src="images/14.png" alt="Final GitHub Pages website result" class="img">
+
+    <hr>
+
+    <h2>✅ Result</h2>
+
+    <p>
+      You now have a simple website hosted on <strong>GitHub Pages</strong> from an HTML/CSS project.
+      This method is ideal for publishing a small showcase site, a tutorial, simple documentation, or a learning project.
+    </p>
+
+  </div>
+</body>
+</html>
